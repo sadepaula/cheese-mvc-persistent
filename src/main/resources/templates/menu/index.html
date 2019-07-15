@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head th:replace="fragments :: head"></head>
+<body>
+    <nav th:replace="fragments :: navigation"></nav>
+
+    <ul>
+        <li th:each ="menus : ${menus}" th:text="${menus}">
+            <a th:herf="'/menus/view/' + ${menus.id}" th:text="${menus.name}"></a>
+        </li>
+    </ul>
+</body>
+</html>
