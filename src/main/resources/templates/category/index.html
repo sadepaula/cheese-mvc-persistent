@@ -5,6 +5,8 @@
     <title>Category</title>
 </head>
 <body>
+
+<nav th:replace="fragments :: navigation"></nav>
 <ul>
     <li th:each ="category : ${category}" th:text="${category.name}"></li>
 </ul>

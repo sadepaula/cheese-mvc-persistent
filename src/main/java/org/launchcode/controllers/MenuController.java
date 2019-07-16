@@ -29,6 +29,7 @@ public class MenuController {
     public String index (Model model) {
         model.addAttribute("title", "Menus");
         model.addAttribute("menus", menuDao.findAll());
+        System.out.print(menuDao.findAll());
       return "menu/index";
     }
     @RequestMapping(value = "add", method = RequestMethod.GET)

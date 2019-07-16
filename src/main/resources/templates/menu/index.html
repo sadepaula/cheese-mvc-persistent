@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
     <head th:replace="fragments :: head"></head>
-<body>
-    <nav th:replace="fragments :: navigation"></nav>
+    <body>
+        <title>Menu</title>
 
-    <ul>
-        <li th:each ="menus : ${menus}" th:text="${menus}">
-            <a th:herf="'/menus/view/' + ${menus.id}" th:text="${menus.name}"></a>
-        </li>
-    </ul>
-</body>
+        <nav th:replace="fragments :: navigation"></nav>
+
+        <ul>
+            <li th:each ="menu : ${menus}"> <a th:href="'/menu/view/' + ${menu.id}" th:text="${menu.name}"></a>
+            </li>
+        </ul>
+
+    <p> <a href="/menu/add">Add Menu </a></p>
+    </body>
 </html>
